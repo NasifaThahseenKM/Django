@@ -1,3 +1,6 @@
 from django.shortcuts import render
+def greeting(request):
+    return render(request,'index.html')
 
-# Create your views here.
+def greeting(request):
+    return render(request, 'index2.html')
