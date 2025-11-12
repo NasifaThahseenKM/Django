@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student List</title>
+</head>
+<body>
+    <h1>Classroom Students</h1>
+
+    {% if students %}
+        {% for s in students %}
+            <h2>Name: {{ s.name }}</h2>
+            <p>Grade: {{ s.grade }}</p>
+
+            {% if s.passed %}
+                <p style="color: green;">Passed</p>
+            {% else %}
+                <p style="color: red;">Failed</p>
+            {% endif %}
+
+            <hr>
+        {% endfor %}
+    {% else %}
+        <p>No students found.</p>
+    {% endif %}
+</body>
+</html>

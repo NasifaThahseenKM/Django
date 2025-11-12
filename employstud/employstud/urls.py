@@ -20,5 +20,5 @@ from records import views
 
 urlpatterns = [
     path('', views.employdir, name='employdir'),
-    
+    path('stud/',views.studdir, name='studdir'),
 ]

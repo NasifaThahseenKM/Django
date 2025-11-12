@@ -9,3 +9,10 @@ def employdir(request):
    
     return render(request, 'employdir.html', {'employ': employ})
 
+def studdir(request):
+    students = [
+        {'name': 'Alice', 'grade': 85, 'passed': True},
+        {'name': 'Bob', 'grade': 45, 'passed': False},
+        {'name': 'Charlie', 'grade': 72, 'passed': True},
+    ]
+    return render(request, 'studdir.html', {'students': students})
