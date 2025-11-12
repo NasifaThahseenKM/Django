@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 </head>
 <body>
-    <h1>Hello World</h1>
+  {% for obj in my_objects %}
+    <h1>{{ obj.name }}</h1>
+    <p>Age: {{ obj.age }}</p>
+    <p>City: {{ obj.city }}</p>
+   {% endfor %}
 </body>
 </html>
