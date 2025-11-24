@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thank You</title>
+</head>
+<body>
+
+    <h2>Welcome {{ username }},</h2>
+
+    <h3>Full Form Data Received:</h3>
+
+    <ul>
+        {% for key, value in formData.items %}
+            <li>{{ key }} : {{ value }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
