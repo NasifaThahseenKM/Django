@@ -20,5 +20,7 @@ from thankucolor import views
 urlpatterns = [
     path('', views.home),
     path('result/', views.result),
+    path('color/', views.color, name='color'),
+    path('color/result/', views.color_result, name='color_result'),
 ]
 

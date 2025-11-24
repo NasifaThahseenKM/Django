@@ -9,3 +9,21 @@ def result(request):
         'username': username,
         'formData': request.GET
     })
+
+
+def color(request):
+    # Display the input form
+    return render(request, 'color.html')
+
+def color_result(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        color = request.POST.get('color')
+        return render(request, 'colorform.html', {
+            'name': name,
+            'color': color,
+            'formData': request.POST
+        })
+    else:
+        # Redirect to form if someone visits result page directly
+        return render(request, 'color.html')

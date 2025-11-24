@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Hello {{ name }}, your favorite color is {{ color }}!</h1>
+
+    <h2>Full Form Data Received:</h2>
+<ul>
+    {% for key, value in formData.items %}
+        {% if key != 'csrfmiddlewaretoken' %}
+            <li>{{ key }}: {{ value }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+
+    <a href="{% url 'color' %}">Go Back</a>
+</body>
+</html>
