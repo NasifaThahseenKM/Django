@@ -5,8 +5,9 @@
     <title>Add Book</title>
 </head>
 <body>
-
+    <a href="{% url 'add_customer' %}">Customer Details</a>
     <h1>Add a New Book</h1>
+    <p>Please fill out the form below to add a new book to the collection.</p>
 
     <form method="POST">
         {% csrf_token %}
