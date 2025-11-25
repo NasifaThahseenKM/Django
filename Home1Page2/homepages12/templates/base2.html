@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Simple Website</title>
+</head>
+<body>
+
+    <!-- HEADER (Shared) -->
+    <header style="background:#ddd; padding:10px;">
+        <h1>My Simple Website</h1>
+        <nav>
+            <a href="{% url 'home2' %}">Home</a> |
+            <a href="{% url 'about2' %}">About</a> |
+            <a href="{% url 'contact2' %}">Contact</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- MAIN BODY -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <hr>
+
+    <!-- FOOTER (Shared Notice Board) -->
+    <footer style="background:#eee; padding:10px;">
+        <h3>Notice Board</h3>
+        <ul>
+            <li>Website will be under maintenance this Saturday</li>
+            <li>New blog section coming soon!</li>
+            <li>Contact us for more information</li>
+        </ul>
+    </footer>
+
+</body>
+</html>
