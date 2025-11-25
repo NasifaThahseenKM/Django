@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head></head>
-<body>
+{% extends 'layouts/app-layout.html'%}
+{% block 'content' %}
     <h1>Login</h1>
-
-    <form action="" method="GET">
-        <label>Email</label><br>
-        <input type="email" name="email"><br>
-
-        <label>Password</label><br>
-        <input type="password" name="password"><br>
-
+    <form action="" method="POST">
+     {% csrf_token %}
+        {{ form }}
         <input type="submit" value="Submit">
     </form>
-</body>
-</html>
+{% endblock %}  

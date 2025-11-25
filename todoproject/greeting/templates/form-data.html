@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
+{% extends 'layouts/app-layout.html'%}
+{% block 'content' %}
 <body>
-    <h2>{{ email }}</h2>
-    <table>
-    {% for x,y in formData.items %}
-     <tr>
-         <td>{{ x }}</td>
-         <td>:</td>
-         <td>{{ y }}</td>
-     </tr>
-    {% endfor %}
-    </table>
-</body>
-</html>
+<h1>customers</h1>
+<table border="3">
+    <tr>
+    <th>email</th>
+    <th>password</th></tr>
+     
+    <tr>
+    <td>{{customer.email}}</td>
+    <td>{{customer.password}}</td>
+</tr>
+
+</table>
+{% endblock %}
+
+

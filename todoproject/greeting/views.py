@@ -1,9 +1,21 @@
 from django.shortcuts import render
-
+from .forms import LoginModelForm
 def greeting(request):
-    # Just read values but do not show them
-    email = request.GET.get('email')
-    password = request.GET.get('password')
+    if request.method == 'POST':
+        form = LoginModelForm(request.POST)
+        if form.is_valid():
+            cust = form.save()
+            return render(request,'form-data.html',{
+                'message': 'Data saved to db',
+                'customer': cust
+            })
+    else:
+        form = LoginModelForm()
+    return render(request,'index.html',{'form':form})
 
-    # Always render the same page — empty form
-    return render(request, 'index.html')
+def aboutUs(request):
+    return render(request,'about-us.html')
+def pages(request, title):
+    return render(request,'pages.html',{'title':title})
+def count(request, num):
+    return render(request,'count.html',{'num':num})

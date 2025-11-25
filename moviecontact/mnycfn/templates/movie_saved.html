@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Saved</title>
+</head>
+<body>
+
+    <h2>Movie saved: {{ movie.name }} ({{ movie.year }})</h2>
+
+    <a href="{% url 'add_movie' %}">Add another movie</a>
+
+</body>
+</html>

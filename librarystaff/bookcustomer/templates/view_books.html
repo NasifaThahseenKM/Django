@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>All Books</title>
+</head>
+<body>
+
+    <h1>Saved Books</h1>
+
+    <ul>
+        {% for book in books %}
+            <li><strong>{{ book.title }}</strong> by {{ book.author }}</li>
+        {% empty %}
+            <li>No books added yet.</li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="{% url 'add_book' %}">Add Another Book</a>
+
+</body>
+</html>
