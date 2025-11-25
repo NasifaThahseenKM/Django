@@ -1,0 +1,10 @@
+<h2>Students List</h2>
+
+<ul>
+    {% for student in students %}
+        <li>
+            {{ student.name }}
+            <a href="{% url 'result_page' student.name %}">View Result</a>
+        </li>
+    {% endfor %}
+</ul>
