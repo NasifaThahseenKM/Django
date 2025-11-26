@@ -8,3 +8,10 @@
         </li>
     {% endfor %}
 </ul>
+
+<hr>
+<h1>College System</h1>
+
+<a href="{% url 'students:list' 'Welcome Students!' %}">Go to Students</a>
+<br><br>
+<a href="{% url 'teachers:list' 'Welcome Teachers!' %}">Go to Teachers</a>

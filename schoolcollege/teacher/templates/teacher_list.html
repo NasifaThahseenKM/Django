@@ -1,0 +1,13 @@
+<h2>Teachers Page</h2>
+
+<p>{{ msg }}</p>
+
+<ul>
+    {% for t in teachers %}
+        <li>{{ t.name }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'teachers:add' %}">Add Teacher</a>
+<br><br>
+<a href="{% url 'home' %}">Back to Home</a>
