@@ -23,5 +23,11 @@ urlpatterns = [
     path('page/<str:title>/', views.pages, name='page'),
     path('count/<int:num>/', views.count, name='count'),
     path('contactus/', include('contactus.urls')),
-    path('products/',include('products.urls'))
+    path('products/',include('products.urls')),
+    path('pagevisit/',views.pagevisit,name='page_visit'),
+    path('signup/',views.signup_page,name='signup'),
+    path('login/',views.login_page,name='login'),
+    path('logout/', views.logout_view,name='logout'),
+    path('productsapi/', include('productsapi.urls')),
+    path('fileupload/', include('filemaker.urls')),
 ]
